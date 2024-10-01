@@ -1,4 +1,4 @@
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.util.Arrays;
 import java.util.List;
 
@@ -6,9 +6,9 @@ public class Main {
 
     public Main() {
 
-        /*Polymorfism genom att skapa objekt av subklasser som sparas i
-        en lista med objekt av typen Plant som är superklass. Arvshierarkin gör
-        detta möjligt.
+        /*Polymorfism - Skapar objekt av subklasser som sparas i en
+        lista med objekt av typen Plant som är superklass. Arvshierarkin
+        gör detta möjligt.
          */
         Plant Igge = new Succulent("Igge");
         Plant Laura = new Palm("Laura", 5);
@@ -19,7 +19,7 @@ public class Main {
 
         while (true) {
             String quit = "q";
-            String plantChoice = JOptionPane.showInputDialog("Vilken växt ska få vätska?" + "\n\nQ - Avsluta!");
+            String plantChoice = JOptionPane.showInputDialog("Vilken växt ska få vätska?\n\nQ - Avsluta!");
 
             if (plantChoice == null || plantChoice.equalsIgnoreCase(quit)) {
                 break;
@@ -30,13 +30,7 @@ public class Main {
                 boolean matchFound = false;
                 for (Plant plant : plants) {
                     if (plantChoice.trim().equalsIgnoreCase(plant.getName())) {
-                        /* Polymorfism - Beroende på vilken klass plantan
-                        är av kommer den klassens metoder appliceras.
-                        Även Enums används för att få fram vilken liquidType som
-                        ska användas för den specifika plantan.
-                         */
-                        JOptionPane.showMessageDialog(null, plant.getName() + ": " +
-                                plant.getLiquidAmount() + "L " + plant.getLiquidType().lowercase);
+                        plant.printNeed();
                         matchFound = true;
                         plantLoop = false;
                         break;
