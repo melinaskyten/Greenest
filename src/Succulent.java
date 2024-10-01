@@ -1,8 +1,8 @@
 public class Succulent extends Plant {
 
     //Inkapsling
-    final private LiquidType liquidType = LiquidType.MINERALVATTEN;
-    private double liquidAmount = 0.02;
+    private final LiquidType liquidType = LiquidType.MINERALVATTEN;
+    private final double liquidAmount = 0.02;
 
     public Succulent(String name){
         super(name);

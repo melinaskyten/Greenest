@@ -2,6 +2,8 @@ public class CarnivorousPlant extends Plant{
 
     //Inkapsling
     private final LiquidType liquidType = LiquidType.PROTEINDRYCK;
+    private final double liquidBaseLevel = 0.1;
+    private final double liquidPerMeter = 0.2;
 
     public CarnivorousPlant(String name, double heightMeter){
         super(name, heightMeter);
@@ -9,7 +11,7 @@ public class CarnivorousPlant extends Plant{
 
     @Override
     public double getLiquidAmount(){
-        return 0.1 + (0.2 * getHeightMeter());
+        return liquidBaseLevel + (liquidPerMeter * getHeightMeter());
     }
 
     @Override

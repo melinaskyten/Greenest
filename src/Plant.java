@@ -1,6 +1,6 @@
 public abstract class Plant implements IPlantCare{
 
-    //Inkapsling
+    //Inkapsling av variabler genom att sätta dem privata
     private String name;
     private double heightMeter;
 
@@ -13,6 +13,7 @@ public abstract class Plant implements IPlantCare{
         this.name = name;
     }
 
+    //Publika metoder för att kunna komma åt de privata variablerna
     public String getName() {
         return name;
     }
