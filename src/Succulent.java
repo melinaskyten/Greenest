@@ -1,6 +1,6 @@
 public class Succulent extends Plant {
 
-    //Inkapsling
+    //Inkapsling av variabler genom att sätta dem privata
     private final LiquidType liquidType = LiquidType.MINERALVATTEN;
     private final double liquidAmount = 0.02;
 

@@ -1,6 +1,6 @@
 public class Palm extends Plant{
 
-    //Inkapsling
+    //Inkapsling av variabler genom att sätta dem privata
     private final LiquidType liquidType = LiquidType.KRANVATTEN;
     private final double liquidPerMeter = 0.5;
 

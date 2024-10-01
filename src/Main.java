@@ -7,7 +7,7 @@ public class Main {
     public Main() {
 
         /*Polymorfism genom att skapa objekt av subklasser som sparas i
-        en lista med objekt av typen Plant som är superklass. Arvsierarkin gör
+        en lista med objekt av typen Plant som är superklass. Arvshierarkin gör
         detta möjligt.
          */
         Plant Igge = new Succulent("Igge");
